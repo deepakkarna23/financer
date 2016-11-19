@@ -1,0 +1,19 @@
+$primary-font: 'Open Sans', sans-serif;  
+$secondary-font: 'Audiowide', sans-serif; 
+$main-red: #FF0000;  
+
+.navbar-default {
+  font-family: $secondary-font;
+  background: white;
+}
+
+html, body {
+  font-family: $primary-font;
+}
+
+.navbar-default .navbar-brand {
+  font-weight: 100; 
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: $main-red;
+}

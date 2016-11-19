@@ -1,2 +1,2 @@
-module IdeasHelper
+module FinancesHelper
 end
