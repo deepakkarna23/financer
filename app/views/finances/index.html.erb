@@ -1,6 +1,38 @@
-
-<% @finances.each do |finance| %>
-  <h3><%= finance.title %></h3>
-  <h4><%= finance.amount %></h4>
-  <h4><%= finance.date %></h4>
+<%= simple_form_for Finance.new do |f| %>
+  <%= f.input :date %>
+  <%= f.input :title %>
+  <%= f.input :amount %>
+  <%= f.submit 'Submit', class: 'btn btn-primary' %>
 <% end %>
+  
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <blockquote>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Title</th>
+                  <th>Amount</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                  <% @finances.each do |finance| %>
+                    <tr>
+                      <td><%= finance.date %></td>
+                      <td><%= finance.title %></td>
+                      <td>Rs. <%= finance.amount %></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  <% end %>                      
+                </tr>
+              </tbody>
+            </table>
+      </blockquote> 
+    </div>
+  </div>
+
+

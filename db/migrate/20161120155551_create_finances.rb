@@ -3,7 +3,7 @@ class CreateFinances < ActiveRecord::Migration
     create_table :finances do |t|
       t.text :title
       t.decimal :amount
-      t.datetime :date
+      t.date :date
       t.timestamps null: false
     end
   end
