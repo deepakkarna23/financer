@@ -45,6 +45,11 @@ group :development do
   gem 'spring'
 end
 
+#For bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 
+#For form
 gem 'simple_form'
+
+#For pagination
+gem 'will_paginate', '~> 3.1.0'
