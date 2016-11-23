@@ -6,6 +6,8 @@ Rails.application.routes.draw do
    root 'finances#index'
    
    resources :finances
+   
+   get 'newrecord' => 'static_pages#newrecord'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
