@@ -1,8 +1,6 @@
-<h1>Edit Finance</h1>
-
 <%= simple_form_for @finance, method: :patch do |f| %>
   <%= f.input :title %>
   <%= f.input :amount %>
   <%= f.input :date %>
-  <%= f.submit 'Submit', class: 'btn btn-primary' %>
+  <%= f.submit 'Update Record', class: 'btn btn-success' %>
 <% end %>
