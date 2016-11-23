@@ -1,11 +1,14 @@
 $primary-font: 'Open Sans', sans-serif;  
 $secondary-font: 'Audiowide', sans-serif; 
-$main-red: #FF0000;  
+$main-red: #FFFFFF;  
 $footer-height: 45px; 
 
 .navbar-default {
   font-family: $secondary-font;
-  background: white;
+}
+
+.navbar-header, .static {
+  background-color: black;
 }
 
 html, body {
@@ -17,6 +20,15 @@ html, body {
   font-size: 30px;
   letter-spacing: 2px;
   color: $main-red;
+}
+
+.foot {
+  background-color: #2f4f4f;
+  color: white;
+}
+
+.ft {
+  padding:10px;
 }
 
 
