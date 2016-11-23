@@ -47,8 +47,8 @@
                       <td><%= finance.date %></td>
                       <td><%= finance.title %></td>
                       <td>Rs. <%= finance.amount %></td>
-                      <td></td>
-                      <td></td>
+                      <td><%= link_to 'Edit', edit_finance_path(finance), class: 'btn btn-sm btn-success' %></td>
+                      <td><%= link_to 'Delete', finance_path(finance), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %></td>
                     </tr>
                   <% end %>                      
               </tbody>

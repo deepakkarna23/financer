@@ -5,11 +5,16 @@ class FinancesController < ApplicationController
     
     def create
         @finance = Finance.create(finance_params)
+        if @finance.valid?
+            # Implement later
+        else
+            # Implement later
+        end
         redirect_to root_path
     end
     
     def edit
-        @idea = Finance.find(params[:id])
+        @finance = Finance.find(params[:id])
     end
     
     def update
@@ -19,6 +24,13 @@ class FinancesController < ApplicationController
       else
         redirect_to edit_finance_path(params[:id])
       end
+    end
+    
+    
+    def destroy
+      @finance = Finance.find(params[:id])
+      @finance.destroy
+      redirect_to root_path
     end
     
     private
