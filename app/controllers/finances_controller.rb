@@ -20,7 +20,7 @@ class FinancesController < ApplicationController
     def update
       @finance = Finance.find(params[:id])
       if @finance.update(finance_params)
-        flash[:success] = "The finance has been updated!"
+        flash[:success] = "The record has been updated!"
         redirect_to root_path
       else
         flash[:alert] = "Woops! Looks like there has been an error!"
@@ -32,7 +32,7 @@ class FinancesController < ApplicationController
     def destroy
       @finance = Finance.find(params[:id])
       @finance.destroy
-      flash[:success] = "The idea was successfully deleted!"
+      flash[:success] = "The record was successfully deleted!"
       redirect_to root_path
     end
     
