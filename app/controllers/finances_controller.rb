@@ -6,9 +6,9 @@ class FinancesController < ApplicationController
     def create
         @finance = Finance.create(finance_params)
         if @finance.valid?
-            # Implement later
+            flash[:success] = "Your finance has been added!"
         else
-            # Implement later
+            flash[:alert] = "Woops! Looks like there has been an error!"
         end
         redirect_to root_path
     end
@@ -20,8 +20,10 @@ class FinancesController < ApplicationController
     def update
       @finance = Finance.find(params[:id])
       if @finance.update(finance_params)
+        flash[:success] = "The finance has been updated!"
         redirect_to root_path
       else
+        flash[:alert] = "Woops! Looks like there has been an error!"
         redirect_to edit_finance_path(params[:id])
       end
     end
@@ -30,6 +32,7 @@ class FinancesController < ApplicationController
     def destroy
       @finance = Finance.find(params[:id])
       @finance.destroy
+      flash[:success] = "The idea was successfully deleted!"
       redirect_to root_path
     end
     
